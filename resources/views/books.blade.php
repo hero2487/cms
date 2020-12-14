@@ -20,6 +20,12 @@
             <div class="form-group">
                 <div class="col-sm-6">
                     <input type="text" name="item_name" class="form-control">
+                    <label for="">番号※３文字以内
+                    <input type="text" name="item_number" class="form-control"></label><br>
+                    <label for="">数量
+                    <input type="text" name="item_amount" class="form-control"></label><br>
+                    <label for="">日付
+                    <input type="date" name="published" class="form-control"></label><br>
                 </div>
             </div>
 
@@ -55,7 +61,6 @@
                                 <form action="{{ url('book/'.$book->id) }}" method="POST">
                                 {{ csrf_field() }}
                                 {{ method_field('delete') }}
-                                
                                 <button type="submit" class="btn btn-danger">
                                 削除
                                 </button>
